@@ -11,7 +11,7 @@ const CustomArrow = ({ className, onClick, direction, show }) => {
   
   return (
     <div
-      className={`custom-arrow ${className} slick-${direction} bg-gray-500 hover:bg-gray-700 text-white hover:text-white font-bold flex justify-center items-center rounded-full absolute z-10 ${
+      className={`custom-arrow ${className} slick-${direction} bg-sisal-70 hover:bg-gray-700 text-white hover:text-white font-bold flex justify-center items-center rounded-full absolute z-10 ${
         direction === "prev" ? "left-0" : "right-0"
       }`}
       onClick={onClick}
