@@ -1,10 +1,8 @@
 import { Fragment } from "react";
 import SectionInfo from "../common/SectionInfo";
-import { bookData } from "../../mock-data/bookData";
+import { bookData } from "../../mock-data/newOnShelves";
 import BookCard from "../common/BookCard";
 import TabSlider from "../common/TabSlider";
-import IconComp from "../common/IconComp";
-import { NewsIconsData } from "../../mock-data/iconsData";
 
 const NewsOnShelves = () => {
   const settings = {
@@ -39,24 +37,16 @@ const NewsOnShelves = () => {
   };
   return (
     <Fragment>
-      <div className="p-4 mt-20">
+      <div>
         <SectionInfo heading="News on Shelves" />
         <div className="mt-5">
-        <TabSlider settings={settings}>
-          {bookData.map((book) => (
-            <div key={book.id} className="pr-4">
-              <BookCard item={book} />
-            </div>
-          ))}
-        </TabSlider>
-
-        <div className="flex gap-5 justify-center mt-12">
-      {NewsIconsData.map((icon) => (
-          <div className="w-auto" key={icon.id}>
-            <IconComp icon={icon.img} text={icon.text} />
-          </div>
-        ))}
-      </div>
+          <TabSlider settings={settings}>
+            {bookData.map((book) => (
+              <div key={book.id} className="pr-4">
+                <BookCard item={book} />
+              </div>
+            ))}
+          </TabSlider>
         </div>
       </div>
     </Fragment>

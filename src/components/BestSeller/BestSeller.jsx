@@ -1,10 +1,7 @@
 import TabSlider from "../common/TabSlider";
 import BookCard from "../common/BookCard";
 import SectionInfo from "../common/SectionInfo";
-import {bookData} from '../../mock-data/bookData'
-import IconComp from "../common/IconComp";
-import { iconsData } from "../../mock-data/iconsData";
-
+import { bookData } from "../../mock-data/bestSeller";
 
 const BestSeller = () => {
   const settings = {
@@ -38,12 +35,9 @@ const BestSeller = () => {
     // ]
   };
 
-  console.log(iconsData)
   return (
-    <div className="p-4">
-      <SectionInfo
-        heading="Our Bestsellers"
-      />
+    <div className="px-5">
+      <SectionInfo heading="Our Bestsellers" />
       <TabSlider settings={settings}>
         {bookData.map((book) => (
           <div key={book.id} className="pr-4">
@@ -51,14 +45,6 @@ const BestSeller = () => {
           </div>
         ))}
       </TabSlider>
-
-      <div className="flex gap-5 justify-center mt-12">
-      {iconsData.map((icon) => (
-          <div className="w-auto" key={icon.id}>
-            <IconComp icon={icon.img} text={icon.text} />
-          </div>
-        ))}
-      </div>
     </div>
   );
 };

@@ -6,8 +6,8 @@ const ReadMoreButton = () => (
 );
 const SectionInfo = ({ heading, subtext }) => {
   return (
-    <div className="w-full">
-      <div className="flex justify-between items-center mb-2">
+    <div className="w-full pb-3">
+      <div className="flex justify-between items-center ">
         <h2 className="text-2xl">{heading}</h2>
         <ReadMoreButton />
       </div>
@@ -19,7 +19,6 @@ const SectionInfo = ({ heading, subtext }) => {
 SectionInfo.propTypes = {
   heading: PropTypes.string.isRequired,
   subtext: PropTypes.string,
-  ReadMoreButton: PropTypes.elementType.isRequired,
 };
 
 export default SectionInfo;

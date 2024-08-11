@@ -1,7 +1,7 @@
 import TabSlider from "../common/TabSlider";
 import BookCard from "../common/BookCard";
 import SectionInfo from "../common/SectionInfo";
-import {bookData} from '../../mock-data/bookData';
+import {bookData} from '../../mock-data/signedEdition';
 
 const SignedEditions = () => {
   const settings = {

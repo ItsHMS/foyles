@@ -1,11 +1,7 @@
 import TabSlider from "../common/TabSlider";
 import BookCard from "../common/BookCard";
 import SectionInfo from "../common/SectionInfo";
-import {bookData} from '../../mock-data/bookData';
-import IconComp from "../common/IconComp";
-import { BooksTlakData } from "../../mock-data/iconsData";
-
-
+import { bookData } from "../../mock-data/booksTalkingAbout";
 
 const BooksEveryOneTalks = () => {
   const settings = {
@@ -51,14 +47,6 @@ const BooksEveryOneTalks = () => {
           </div>
         ))}
       </TabSlider>
-
-      <div className="flex gap-5 justify-center mt-12">
-      {BooksTlakData.map((icon) => (
-          <div className="w-auto" key={icon.id}>
-            <IconComp icon={icon.img} text={icon.text} />
-          </div>
-        ))}
-      </div>
     </div>
   );
 };

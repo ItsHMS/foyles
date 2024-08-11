@@ -1,0 +1,14 @@
+.hero-slider-container .slick-dots li button {
+  @apply w-[10px] h-[10px] rounded-[5px] opacity-70 bg-white shadow-custom-1;
+}
+
+.hero-slider-container .slick-dots li.slick-active button {
+  @apply bg-shadow shadow-custom-1;
+}
+.hero-slider-container .slick-dots li button::before{
+  @apply hidden
+}
+
+.hero-slider-container .slick-dots{
+  @apply !bottom-3
+}

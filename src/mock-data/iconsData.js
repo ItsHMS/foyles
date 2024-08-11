@@ -21,6 +21,28 @@ import Bt7 from "../assets/icon-images/bt7.png";
 import Bt8 from "../assets/icon-images/bt8.png";
 import Bt9 from "../assets/icon-images/bt9.png";
 import Bt10 from "../assets/icon-images/bt10.png";
+import Icon4_1 from "../assets/icon-images/icons4/1.png"
+import Icon4_2 from "../assets/icon-images/icons4/2.png"
+import Icon4_3 from "../assets/icon-images/icons4/3.png"
+import Icon4_4 from "../assets/icon-images/icons4/4.png"
+import Icon4_5 from "../assets/icon-images/icons4/5.png"
+import Icon4_6 from "../assets/icon-images/icons4/6.png"
+import Icon4_7 from "../assets/icon-images/icons4/7.png"
+import Icon4_8 from "../assets/icon-images/icons4/8.png"
+import Icon4_9 from "../assets/icon-images/icons4/9.png"
+import Icon4_10 from "../assets/icon-images/icons4/10.png"
+import Icon4_11 from "../assets/icon-images/icons4/11.jpeg"
+// 
+import Icon5_1 from "../assets/icon-images/icons5/1.png"
+import Icon5_2 from "../assets/icon-images/icons5/2.png"
+import Icon5_3 from "../assets/icon-images/icons5/3.png"
+import Icon5_4 from "../assets/icon-images/icons5/4.png"
+import Icon5_5 from "../assets/icon-images/icons5/5.png"
+import Icon5_6 from "../assets/icon-images/icons5/6.png"
+import Icon5_7 from "../assets/icon-images/icons5/7.png"
+import Icon5_8 from "../assets/icon-images/icons5/8.png"
+import Icon5_9 from "../assets/icon-images/icons5/9.png"
+import Icon5_10 from "../assets/icon-images/icons5/10.png"
 
 
 export const iconsData = [
@@ -144,5 +166,123 @@ export const BooksTlakData = [
         id: 10,
         img: Bt10,
         text: 'Short Stories'
+    },
+]
+
+
+
+
+
+
+
+
+
+export const iconsData4 = [
+    {
+        id: 1,
+        img: Icon4_1,
+        text: 'Art'
+    },
+    {
+        id: 2,
+        img: Icon4_2,
+        text: 'Biography'
+    },
+    {
+        id: 3,
+        img: Icon4_3,
+        text: 'History'
+    },
+    {
+        id: 4,
+        img: Icon4_4,
+        text: 'Food & Drink'
+    },
+    {
+        id: 5,
+        img: Icon4_5,
+        text: "Self Help"
+    },
+    {
+        id: 6,
+        img: Icon4_6,
+        text: "LGBTQ+"
+    },
+    {
+        id: 7,
+        img: Icon4_7,
+        text: 'Music'
+    },
+    {
+        id: 8,
+        img: Icon4_8,
+        text: "Nature"
+    },
+    {
+        id: 9,
+        img: Icon4_9,
+        text: "Pop. Science"
+    },
+    {
+        id: 10,
+        img: Icon4_10,
+        text: 'Sport'
+    },
+    {
+        id: 11,
+        img: Icon4_11,
+        text: 'Travel'
+    },
+]
+export const iconsData5 = [
+    {
+        id: 1,
+        img: Icon5_1,
+        text: 'Pre-School'
+    },
+    {
+        id: 2,
+        img: Icon5_2,
+        text: 'Characters'
+    },
+    {
+        id: 3,
+        img: Icon5_3,
+        text: 'Picture Books'
+    },
+    {
+        id: 4,
+        img: Icon5_4,
+        text: 'Age 5-8'
+    },
+    {
+        id: 5,
+        img: Icon5_5,
+        text: "Age 9-12"
+    },
+    {
+        id: 6,
+        img: Icon5_6,
+        text: "Children's Reference & Activities"
+    },
+    {
+        id: 7,
+        img: Icon5_7,
+        text: 'Fairy Tale & Gift'
+    },
+    {
+        id: 8,
+        img: Icon5_8,
+        text: "Children's Classics"
+    },
+    {
+        id: 9,
+        img: Icon5_9,
+        text: "Children's Poetry & Anthologies"
+    },
+    {
+        id: 10,
+        img: Icon5_10,
+        text: 'Harry Potter'
     },
 ]

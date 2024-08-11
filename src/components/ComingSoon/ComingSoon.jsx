@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import SectionInfo from "../common/SectionInfo";
-import { bookData } from "../../mock-data/bookData";
+import { bookData } from "../../mock-data/comingSoon";
 import BookCard from "../common/BookCard";
 import TabSlider from "../common/TabSlider";
 
@@ -37,16 +37,16 @@ const CommingSoon = () => {
   };
   return (
     <Fragment>
-      <div className="p-4 mt-20">
+      <div className="px-5">
         <SectionInfo heading="Comming Soon" />
         <div className="mt-5">
-        <TabSlider settings={settings}>
-          {bookData.map((book) => (
-            <div key={book.id} className="pr-4">
-              <BookCard item={book} />
-            </div>
-          ))}
-        </TabSlider>
+          <TabSlider settings={settings}>
+            {bookData.map((book) => (
+              <div key={book.id} className="pr-4">
+                <BookCard item={book} />
+              </div>
+            ))}
+          </TabSlider>
         </div>
       </div>
     </Fragment>
