@@ -1,46 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --www-foyles-co-uk-sisal-70: rgba(207, 199, 181, 0.7);
+  --www-foyles-co-uk-mine-shaft: #313131;
+  --www-foyles-co-uk-cod-gray: #0C0C0C;
+  --www-foyles-co-uk-wild-sand: #F4F4F4;
+  --www-foyles-co-uk-ecru-white: #F1EBDE;
+  --www-foyles-co-uk-black: #000;
+  --www-foyles-co-uk-shark-75: rgba(33, 37, 41, 0.75);
+  --www-foyles-co-uk-white: #FFF;
+  --www-foyles-co-uk-cosmos: #FFD2D5;
+  --www-foyles-co-uk-iceberg: #D2EDF1;
+  --www-foyles-co-uk-moon-mist: #E1DCD2;
+  --www-foyles-co-uk-shadow: #83734D;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --box-shadow-1: 0px 4px 4px 0px rgba(0, 0, 0, 0.50);
+  --box-shadow-2: 1px 1px 3px 1px rgba(130, 130, 130, 0.26);
+  --drop-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-
 body {
+  font-family: "Lato", sans-serif;
   margin: 0;
   place-items: center;
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
 
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
 
 .custom-arrow.slick-prev::before,
 .custom-arrow.slick-next::before {
@@ -52,4 +41,3 @@ h1 {
   height: 44px;
   border-radius: 8px;
 }
-

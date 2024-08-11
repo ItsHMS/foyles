@@ -1,0 +1,10 @@
+.upcoming-event-slider .slick-track {
+  display: flex !important;
+}
+
+.upcoming-event-slider .slick-slide {
+  height: inherit !important;
+}
+.upcoming-event-slider .slick-slide > div {
+  height: 100% !important;
+}

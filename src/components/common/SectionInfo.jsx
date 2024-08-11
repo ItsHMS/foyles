@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 const ReadMoreButton = () => (
-  <button className="bg-gray-900 hover:bg-gray-700 text-white py-2 px-4 rounded">
-    Read More
+  <button className="bg-mine-shaft hover:bg-gray-700 text-white py-1 text-xs px-2 rounded">
+    SEE MORE
   </button>
 );
 const SectionInfo = ({ heading, subtext }) => {
   return (
-    <div className="w-full">
-      <div className="flex justify-between items-center mb-2">
+    <div className="w-full pb-3">
+      <div className="flex justify-between items-center ">
         <h2 className="text-2xl">{heading}</h2>
         <ReadMoreButton />
       </div>
@@ -19,7 +19,6 @@ const SectionInfo = ({ heading, subtext }) => {
 SectionInfo.propTypes = {
   heading: PropTypes.string.isRequired,
   subtext: PropTypes.string,
-  ReadMoreButton: PropTypes.elementType.isRequired,
 };
 
 export default SectionInfo;
