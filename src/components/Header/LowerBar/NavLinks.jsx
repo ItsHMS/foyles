@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Modal from "../../common/Modal";
-import SnackbarAlert from "../../common/SnackbarAlert";
 import OfflineImage from "../../../assets/images/offline.png";
 
 // const NavLinks = () => {
@@ -69,7 +68,6 @@ import OfflineImage from "../../../assets/images/offline.png";
 const NavLinks = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedLink, setSelectedLink] = useState("");
-  const [isSnackbarOpen, setIsSnackbarOpen] = useState(false);
 
   const links = [
     "Fiction",
@@ -92,12 +90,9 @@ const NavLinks = () => {
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setIsSnackbarOpen(true);
   };
 
-  const closeSnackbar = () => {
-    setIsSnackbarOpen(false);
-  };
+
 
   return (
     <>
@@ -142,11 +137,6 @@ const NavLinks = () => {
           </button>
         </div>
       </Modal>
-      <SnackbarAlert
-        message="Modal closed successfully!"
-        isOpen={isSnackbarOpen}
-        onClose={closeSnackbar}
-      />
     </>
   );
 };

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import TabSlider from "../common/TabSlider";
-import SnackbarAlert from "../common/SnackbarAlert";
+import NotificationBar from "../common/NotificationBar"; // Import the new component
 import "../../styles/hero/hero.css";
 import HeroImage1 from "../../assets/images/hero/hero.png";
 import HeroImage2 from "../../assets/images/hero/hero2.jpeg";
@@ -27,14 +27,14 @@ const heroSlides = [
 ];
 
 const HeroSection = () => {
-  const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [notificationOpen, setNotificationOpen] = useState(false);
 
   const handleImageClick = () => {
-    setSnackbarOpen(true);
+    setNotificationOpen(true);
   };
 
-  const closeSnackbar = () => {
-    setSnackbarOpen(false);
+  const closeNotification = () => {
+    setNotificationOpen(false);
   };
 
   const settings = {
@@ -63,19 +63,17 @@ const HeroSection = () => {
         ))}
       </TabSlider>
 
-      <SnackbarAlert
-        isOpen={snackbarOpen}
-        onClose={closeSnackbar}
-        className="bg-white px-8 py-7  rounded-xl flex gap-3 items-center"
-      >
-        <div className="bg-[#FF3D3D] rounded-xl px-7 py-3 mr-3">
-          <div className="text-white">F</div>
-        </div>
-        <div className="text-black">
-          <div className="font-semibold text-2xl pb-1">Great News!</div>
-          <div>Your Order has been shipped.</div>
-        </div>
-      </SnackbarAlert>
+      {notificationOpen && (
+        <NotificationBar
+          message={
+            <div className="flex justify-center items-center gap-3 w-full">
+              <div className="font-semibold text-xl">Great News!</div>
+              <div>Your Order has been shipped.</div>
+            </div>
+          }
+          onClose={closeNotification}
+        />
+      )}
     </div>
   );
 };

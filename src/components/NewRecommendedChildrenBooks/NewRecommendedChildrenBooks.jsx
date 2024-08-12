@@ -1,38 +1,31 @@
+import { useState } from "react";
 import TabSlider from "../common/TabSlider";
 import BookCard from "../common/BookCard";
 import SectionInfo from "../common/SectionInfo";
+import Modal from "../common/Modal";
+import BookModal from "../common/BookModal"; // Import the BookModal component
 import { bookData } from "../../mock-data/childerenRecommended";
 
 const NewRecommendedChildrenBooks = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedBook, setSelectedBook] = useState(null);
+
+  const handleCardClick = (book) => {
+    setSelectedBook(book);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedBook(null);
+  };
+
   const settings = {
     dots: false,
     infinite: false,
     speed: 500,
     slidesToShow: 8,
     slidesToScroll: 1,
-    // responsive: [
-    //     {
-    //         breakpoint: 1024,
-    //         settings: {
-    //             slidesToShow: 3,
-    //             slidesToScroll: 1,
-    //         }
-    //     },
-    //     {
-    //         breakpoint: 600,
-    //         settings: {
-    //             slidesToShow: 2,
-    //             slidesToScroll: 1,
-    //         }
-    //     },
-    //     {
-    //         breakpoint: 480,
-    //         settings: {
-    //             slidesToShow: 1,
-    //             slidesToScroll: 1,
-    //         }
-    //     }
-    // ]
   };
 
   return (
@@ -40,11 +33,21 @@ const NewRecommendedChildrenBooks = () => {
       <SectionInfo heading="New & Recommended Children's Books" />
       <TabSlider settings={settings}>
         {bookData.map((book) => (
-          <div key={book.id} className="pr-4">
+          <div
+            key={book.id}
+            className="pr-4 cursor-pointer"
+            onClick={() => handleCardClick(book)} // Add onClick to open modal
+          >
             <BookCard item={book} />
           </div>
         ))}
       </TabSlider>
+
+      {isModalOpen && (
+        <Modal isOpen={isModalOpen} onClose={closeModal}>
+          <BookModal isOpen={isModalOpen} onClose={closeModal} book={selectedBook} />
+        </Modal>
+      )}
     </div>
   );
 };
