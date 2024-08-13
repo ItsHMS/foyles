@@ -18,6 +18,7 @@ export const bookData = [
         price: 9.99,
         discountedPrice: 8.49,
         image: Book2,
+        description: 'Yellowface is a 2023 novel written by R. F. Kuang. The book was described as a satire of racial diversity in the publishing industry as well as a metafiction about social media, particularly Twitter.'
     },
     { id: 3, title: "Days at the Morisaki", price: 10.99, image: Book3 },
     {

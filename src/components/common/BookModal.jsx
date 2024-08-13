@@ -4,10 +4,10 @@ const BookModal = ({ isOpen, onClose, book }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="relative p-4 bg-white rounded-lg max-w-3xl">
+    <div className="relative px-10 py-5 bg-white rounded-3xl max-w-xl">
       {/* Close Button (X Icon) */}
       <button
-        className="absolute top-2 right-2 p-1"
+        className="absolute top-5 right-4 p-1"
         onClick={onClose}
         aria-label="Close"
       >
@@ -30,9 +30,10 @@ const BookModal = ({ isOpen, onClose, book }) => {
       </button>
 
       {/* Modal Content */}
-      <h2 className="text-xl font-bold">{book.title}</h2>
-      <p className="mt-2">
-        Lorem ipsum dolor sit amet consectetur. Arcu netus donec nisl luctus
+      <h2 className="text-xl font-semibold">{book.title}</h2>
+      <p className="mt-2 text-mine-shaft">
+        {book?.description ||
+          `Lorem ipsum dolor sit amet consectetur. Arcu netus donec nisl luctus
         fringilla dignissim eget urna. Dolor elit nulla risus habitant nunc amet
         sagittis tincidunt. Habitasse neque vel elementum lobortis amet nulla.
         Nibh suspendisse consequat turpis faucibus praesent pharetra nunc.
@@ -41,7 +42,7 @@ const BookModal = ({ isOpen, onClose, book }) => {
         phasellus bibendum nibh vulputate. Amet quam arcu nunc aliquam id
         aliquam mi. Nibh arcu ut magna eleifend vitae sed quam nunc porttitor.
         Mauris sed mollis placerat diam orci ultricies lectus est. Viverra
-        varius faucibus morbi sit malesuada.
+        varius faucibus morbi sit malesuada.`}
       </p>
     </div>
   );

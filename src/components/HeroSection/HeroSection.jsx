@@ -67,8 +67,7 @@ const HeroSection = () => {
         <NotificationBar
           message={
             <div className="flex justify-center items-center gap-3 w-full">
-              <div className="font-semibold text-xl">Great News!</div>
-              <div>Your Order has been shipped.</div>
+              <div>New Arrivals: Discover the Latest Bestsellers and Exclusive Titles Today</div>
             </div>
           }
           onClose={closeNotification}
